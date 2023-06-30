@@ -1,5 +1,4 @@
 # -*- coding: windows-1251 -*-
-# -*- coding: windows-1251 -*-
 import os
 from datetime import datetime
 
@@ -33,14 +32,14 @@ def test_1():
     def div(a, b):
         return a / b
 
-    assert 'Hello World' == hello_world(), "Функция возвращает 'Hello World'"
+    assert 'Hello World' == hello_world(), "Г”ГіГ­ГЄГ¶ГЁГї ГўГ®Г§ГўГ°Г Г№Г ГҐГІ 'Hello World'"
     result = summator(2, 2)
-    assert isinstance(result, int), 'Должно вернуться целое число'
+    assert isinstance(result, int), 'Г„Г®Г«Г¦Г­Г® ГўГҐГ°Г­ГіГІГјГ±Гї Г¶ГҐГ«Г®ГҐ Г·ГЁГ±Г«Г®'
     assert result == 4, '2 + 2 = 4'
     result = div(6, 2)
     assert result == 3, '6 / 2 = 3'
 
-    assert os.path.exists(path), 'файл main.log должен существовать'
+    assert os.path.exists(path), 'ГґГ Г©Г« main.log Г¤Г®Г«Г¦ГҐГ­ Г±ГіГ№ГҐГ±ГІГўГ®ГўГ ГІГј'
 
     summator(4.3, b=2.2)
     summator(a=0, b=0)
@@ -48,9 +47,9 @@ def test_1():
     with open(path) as log_file:
         log_file_content = log_file.read()
 
-    assert 'summator' in log_file_content, 'должно записаться имя функции'
+    assert 'summator' in log_file_content, 'Г¤Г®Г«Г¦Г­Г® Г§Г ГЇГЁГ±Г ГІГјГ±Гї ГЁГ¬Гї ГґГіГ­ГЄГ¶ГЁГЁ'
     for item in (4.3, 2.2, 6.5):
-        assert str(item) in log_file_content, f'{item} должен быть записан в файл'
+        assert str(item) in log_file_content, f'{item} Г¤Г®Г«Г¦ГҐГ­ ГЎГ»ГІГј Г§Г ГЇГЁГ±Г Г­ Гў ГґГ Г©Г«'
 
 
 if __name__ == '__main__':
