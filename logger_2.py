@@ -37,9 +37,9 @@ def test_2():
         def div(a, b):
             return a / b
 
-        assert 'Hello World' == hello_world(), "Функция возвращает 'Hello World'"
+        assert 'Hello World' == hello_world(), "Р¤СѓРЅРєС†РёСЏ РІРѕР·РІСЂР°С‰Р°РµС‚ 'Hello World'"
         result = summator(2, 2)
-        assert isinstance(result, int), 'Должно вернуться целое число'
+        assert isinstance(result, int), 'Р”РѕР»Р¶РЅРѕ РІРµСЂРЅСѓС‚СЊСЃСЏ С†РµР»РѕРµ С‡РёСЃР»Рѕ'
         assert result == 4, '2 + 2 = 4'
         result = div(6, 2)
         assert result == 3, '6 / 2 = 3'
@@ -47,15 +47,15 @@ def test_2():
 
     for path in paths:
 
-        assert os.path.exists(path), f'файл {path} должен существовать'
+        assert os.path.exists(path), f'С„Р°Р№Р» {path} РґРѕР»Р¶РµРЅ СЃСѓС‰РµСЃС‚РІРѕРІР°С‚СЊ'
 
         with open(path) as log_file:
             log_file_content = log_file.read()
 
-        assert 'summator' in log_file_content, 'должно записаться имя функции'
+        assert 'summator' in log_file_content, 'РґРѕР»Р¶РЅРѕ Р·Р°РїРёСЃР°С‚СЊСЃСЏ РёРјСЏ С„СѓРЅРєС†РёРё'
 
         for item in (4.3, 2.2, 6.5):
-            assert str(item) in log_file_content, f'{item} должен быть записан в файл'
+            assert str(item) in log_file_content, f'{item} РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р·Р°РїРёСЃР°РЅ РІ С„Р°Р№Р»'
 
 
 if __name__ == '__main__':
