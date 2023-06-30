@@ -9,7 +9,7 @@ phone_pattern = re.compile(r"^(\+7|8)\D*(\d{3})\D*(\d{3})\D*(\d{2})\D*(\d{2})\D*
 def format_phone(phone):
   nums = phone_pattern.match(phone)
   if nums.groups()[5]:
-    phone = phone_pattern.sub(r"+7(\2)\3-\4-\5 доб.\6", phone)
+    phone = phone_pattern.sub(r"+7(\2)\3-\4-\5 РґРѕР±.\6", phone)
   else:
     phone = phone_pattern.sub(r"+7(\2)\3-\4-\5", phone)
 
@@ -21,7 +21,7 @@ with open("phonebook_raw.csv", "r", encoding="utf8") as f:
 contacts_info = {}
 for contact in contacts_list[1:]:
   lastname, firstname, surname, organization, position, phone, email = contact[:7]
-  name = re.findall(r"([(А-Я][а-я]+)", lastname+firstname+surname)
+  name = re.findall(r"([(Рђ-РЇ][Р°-СЏ]+)", lastname+firstname+surname)
 
   if len(name) < 2: continue
 
